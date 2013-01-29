@@ -14,7 +14,9 @@ $f = fopen('../data/bands.csv','w');
 fwrite($f,$data_string);
 fclose($f);
 
-$_SESSION['message'] ='Nice Job, You should have done it right the first time!';
-
+$_SESSION['message'] = array(
+		'text' => 'Nice Job, You should have done it right the first time!',
+		'type' => 'info'
+);
 header('Location:../?p=list_bands');
 ?>
